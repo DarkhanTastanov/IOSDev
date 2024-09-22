@@ -3,7 +3,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            // Add the diamond image
             Image("diamond")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -15,7 +14,7 @@ struct ContentView: View {
                 .foregroundColor(.black)
                 .padding()
             
-            Text("Success is mine!")
+            Text("Hello!")
                 .font(.system(size: 20))
                 .foregroundColor(.gray)
         }
