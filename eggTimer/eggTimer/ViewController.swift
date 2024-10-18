@@ -43,12 +43,13 @@ class ViewController: UIViewController {
         remainingTime -= 1
         progressBar.setProgress(Float(remainingTime / (remainingTime + 1)), animated: true)
         
-        print("Remaining time: \(Int(remainingTime)) seconds")  // Print remaining time to console
+        print("Remaining time: \(Int(remainingTime)) seconds")
         
         if remainingTime <= 0 {
             timer?.invalidate()
             statusLabel.text = "Done"
             playAlarm()
+            resetUI()
         }
     }
     
