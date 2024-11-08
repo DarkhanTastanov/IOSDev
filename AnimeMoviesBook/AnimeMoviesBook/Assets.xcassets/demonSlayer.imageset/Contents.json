@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "demonSlayer.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

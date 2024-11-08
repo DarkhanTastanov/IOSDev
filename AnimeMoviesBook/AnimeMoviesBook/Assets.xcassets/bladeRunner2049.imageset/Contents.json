@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "bladeRunner2049.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
