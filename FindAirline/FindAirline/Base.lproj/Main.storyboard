@@ -43,7 +43,7 @@
                                 <rect key="frame" x="16" y="131" width="361" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="gFU-MM-RSI" customClass="AirlineCell" customModule="FindAirline" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AirlineCell" rowHeight="145" id="gFU-MM-RSI" customClass="AirlineCell" customModule="FindAirline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gFU-MM-RSI" id="6Dg-v3-zdr">

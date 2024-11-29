@@ -7,7 +7,7 @@ class AirlineCell: UITableViewCell {
 
     func configure(with airline: Airline) {
         airlineNameLabel.text = airline.name
-        if let url = URL(string: airline.logoURL) {
+        if let url = URL(string: airline.logoURL ?? "") {
             airlineImageView.kf.setImage(with: url)
         } else {
             return

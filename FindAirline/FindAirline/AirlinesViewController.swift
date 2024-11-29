@@ -4,7 +4,7 @@ import Kingfisher
 class AirlinesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, AirlineManagerDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-
+    var barText = ""
     var airlines: [Airline] = []
     var filteredAirlines: [Airline] = []
     var airlineManager = AirlineManager()
@@ -20,7 +20,7 @@ class AirlinesViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func fetchAirlines() {
-        airlineManager.fetchAirlines { [weak self] fetchedAirlines in
+        airlineManager.fetchAirlines(searchText: searchBar.text ?? "") { [weak self] fetchedAirlines in
             guard let self = self else { return }
             if let airlines = fetchedAirlines {
                 self.airlines = airlines
@@ -61,9 +61,13 @@ class AirlinesViewController: UIViewController, UITableViewDelegate, UITableView
             filteredAirlines = airlines
         } else {
             filteredAirlines = airlines.filter {
-                $0.name.contains(searchText) ||
-                $0.iata.contains(searchText) ||
-                $0.icao.contains(searchText.lowercased())
+                let name = $0.name
+//                let iata = $0.iata
+//                let icao = $0.icao
+                
+                return name.contains(searchText)
+//                iata.contains(searchText) ||
+//                icao.contains(searchText.lowercased())
             }
         }
         tableView.reloadData()
